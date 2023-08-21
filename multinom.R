@@ -59,7 +59,7 @@ for (i in 1:dim(sdata3)[1]) {
   test3<-test2[1,]
   sdata$cg10871096<-test3
   sdata$Cleft_Type3 <- relevel(factor(sdata$Cleft_Type2), ref = "0")
-  test2 <- multinom(Cleft_Type3 ~ cg10871096+Sex + Age+Demographic , data = sdata)
+  test2 <- multinom(Cleft_Type3 ~ cg10871096+Sex + Age1+Demographic , data = sdata)
   #summary(test2)
   #print(summary(test2))
   z <- summary(test2)$coefficients/summary(test2)$standard.errors
