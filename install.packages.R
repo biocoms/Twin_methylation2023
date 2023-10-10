@@ -1,7 +1,11 @@
 if (!require("BiocManager", quietly = TRUE))
   install.packages("BiocManager")
 
-BiocManager::install("ChAMP")
+# motif analysis
+library("devtools");
+install_github("Danko-Lab/rtfbs_db/rtfbsdb")BiocManager::install("ChAMP")
+
+
 BiocManager::install("shinyMethyl")
 BiocManager::install("EpiDISH")
 BiocManager::install("wateRmelon")
